@@ -1,43 +1,22 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include <math.h>
 #include <locale.h>
-
-#define G_CONST   6.674e-11   /* гравитационная постоянная, Н·м^2/кг^2 */
-#define M_EARTH   5.972e24    /* масса Земли, кг */
-#define R_EARTH   6.371e6     /* средний радиус Земли, м */
-
-int main(void)
-{
-    setlocale(LC_ALL, "");    /* поддержка русского языка в консоли */
-
-    double m, h, F, g_local;
-
-    printf("Вычисление силы тяжести при падении тела\n");
-    printf("-----------------------------------------\n");
-
-    /* --- Ввод данных с проверкой --- */
-    printf("Введите массу тела m (кг): ");
-    if (scanf("%lf", &m) != 1 || m <= 0.0) {
-        fprintf(stderr, "Ошибка: масса должна быть положительным числом.\n");
-        return 1;
-    }
-
-    printf("Введите высоту падения h (м): ");
-    if (scanf("%lf", &h) != 1 || h < 0.0) {
-        fprintf(stderr, "Ошибка: высота не может быть отрицательной.\n");
-        return 1;
-    }
-
-    /* --- Вычисления --- */
-    g_local = G_CONST * M_EARTH / ((R_EARTH + h) * (R_EARTH + h));
-    F = m * g_local;
-
-    /* --- Вывод результатов --- */
-    printf("\nРезультаты:\n");
-    printf("  Масса тела ................ m = %.6g кг\n", m);
-    printf("  Высота падения ............ h = %.6g м\n", h);
-    printf("  Ускорение своб. падения ... g = %.6f м/с^2\n", g_local);
-    printf("  Сила тяжести .............. F = %.6f Н\n", F);
-
-    return 0;
+#include <windows.h>
+#include <math.h>
+void main() {
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	setlocale(LC_NUMERIC, "C");
+	double x = 0 , y = 0, z = 0, h = 0;
+	puts("Введите х");
+	scanf("&Lf", &x);
+	while (getchar() != '\n');
+	puts("Введите у");
+	scanf("*Lf", &y);
+	while (getchar() != '\n');
+	puts("Введите z");
+	scanf("%Lf", &z);
+	while (getchar() != '\n');
+	h = (pow(x, y + 1) + exp(y - 1)) / (1 + x * fabs(y - tan(z))) * (1 + fabs(y - x)) + (pow(fabs(y - x), 2) / 2) - (pow(fabs(y - x), 3) / 3);
+	printf("Результат вычисления: %.5lf", h);
 }
