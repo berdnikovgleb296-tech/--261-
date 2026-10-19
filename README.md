@@ -16,12 +16,12 @@ cos x + cos x^2 + cos x^3 + ... + cos x^n
 
   ## 2.Блок-схема
 <img width="399" height="614" alt="678267131-48b0f9a7-0679-425e-a137-660739467867" src="https://github.com/user-attachments/assets/87ac25e4-3c0e-44ca-bd8e-40e29ba4bbed" />
-https://app.diagrams.net/#Llr8.drawio#%7B%22pageId%22%3A%22dN-ULCq-FuuFo31CVBfL%22%7D
+# https://app.diagrams.net/#Llr8.drawio#%7B%22pageId%22%3A%22dN-ULCq-FuuFo31CVBfL%22%7D
   ## 3. Реализация программы
-## #define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
-#include <locale.h>
-#include <math.h>
+define _CRT_SECURE_NO_WARNINGS
+include <stdio.h>
+include <locale.h>
+include <math.h>
 
 void main() {
     int n;
