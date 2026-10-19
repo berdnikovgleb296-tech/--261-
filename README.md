@@ -47,8 +47,10 @@ void main() {
     printf("\nСумма: %.4lf\n", sum);
 }
 
+
 ##4. Результаты работы программы
 <img width="423" height="158" alt="678269880-321b9e6e-5d37-49ef-911a-2cc0b303a3cd" src="https://github.com/user-attachments/assets/a144bb5c-c50c-459a-82df-3182416b8af5" />
+
 ##5. Выполнил
 Бердников Глеб бИЦТ-261
 
